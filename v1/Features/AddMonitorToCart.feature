@@ -2,7 +2,7 @@ Feature: AddMonitorToCart
 
 Scenario: Successful addition of the first monitor inside cart with price matching with product, cart sub total and product price inside cart
 Given User launch chrome browser
-When User opens "www.amazon.com"
+When User opens "https://www.amazon.com"
 Then Window with title "Amazon.com. Spend less. Smile more." should be opened
 When User Sets the location zip to "10001"
 Then Location should be updated to "New York"
@@ -20,3 +20,4 @@ When User checks price of the monitor inside cart
 Then Cart Price should match with price of the product from product page
 When User checks sub total of the cart
 Then Sub Total Price should match with price of the product from product page
+Then Close the browser

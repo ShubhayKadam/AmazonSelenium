@@ -18,9 +18,8 @@ public class AddMonitorToCart {
 
 	WebDriver ldriver;
 	WebDriverWait wait;
-//	public JavascriptExecutor js = (JavascriptExecutor) ldriver;
-//	public Actions act = new Actions(ldriver);
-//	public Boolean check;
+	public String monitorName;
+	public Boolean check;
 	
 	
 	@FindBy (xpath="//input[contains(@id,'searchtextbox')]")
@@ -104,10 +103,10 @@ public class AddMonitorToCart {
 	}
 	public void selectFirstMonitor() {
 		WebElement firstMonitor = ItemList.get(0);
+		monitorName = ItemList.get(0).getText();
 		firstMonitor.click();
 	}
 	public String displayFirstMonitorName() {
-		String monitorName = ItemList.get(0).getText();
 		System.out.println("First monitor name is : "+monitorName);
 		return monitorName;
 	}
@@ -165,9 +164,7 @@ public class AddMonitorToCart {
 		return prodSubTotal;
 	}
 	public Boolean compareTotal(String price1, String price2) {
-		Boolean check;
 		if(price1.equals(price2)) {
-			System.out.println(price1+" and "+price2+" are matching");
 			check = true;
 		}
 		else {
