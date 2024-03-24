@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-03-23T23:27:56 IST" name="Default suite" finished-at="2024-03-23T23:30:03 IST" duration-ms="126587">
+    <groups>
+    </groups>
+    <test started-at="2024-03-23T23:27:56 IST" name="Default test" finished-at="2024-03-23T23:30:03 IST" duration-ms="126587">
+      <class name="com.testng.AmazonTest.AmazonTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testng.AmazonTest.AmazonTest@4b5d6a01]" started-at="2024-03-23T23:27:56 IST" name="setup" finished-at="2024-03-23T23:28:00 IST" duration-ms="3795" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addHeadphonePlusKeyboard()[pri:0, instance:com.testng.AmazonTest.AmazonTest@4b5d6a01]" started-at="2024-03-23T23:28:00 IST" name="addHeadphonePlusKeyboard" finished-at="2024-03-23T23:29:06 IST" duration-ms="65648" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addHeadphonePlusKeyboard -->
+        <test-method is-config="true" signature="teardownclass()[pri:0, instance:com.testng.AmazonTest.AmazonTest@4b5d6a01]" started-at="2024-03-23T23:29:06 IST" name="teardownclass" finished-at="2024-03-23T23:29:06 IST" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardownclass -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testng.AmazonTest.AmazonTest@4b5d6a01]" started-at="2024-03-23T23:29:06 IST" name="setup" finished-at="2024-03-23T23:29:10 IST" duration-ms="4498" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addLaptopToCart()[pri:0, instance:com.testng.AmazonTest.AmazonTest@4b5d6a01]" started-at="2024-03-23T23:29:10 IST" name="addLaptopToCart" finished-at="2024-03-23T23:29:35 IST" duration-ms="24740" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addLaptopToCart -->
+        <test-method is-config="true" signature="teardownclass()[pri:0, instance:com.testng.AmazonTest.AmazonTest@4b5d6a01]" started-at="2024-03-23T23:29:35 IST" name="teardownclass" finished-at="2024-03-23T23:29:35 IST" duration-ms="129" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardownclass -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testng.AmazonTest.AmazonTest@4b5d6a01]" started-at="2024-03-23T23:29:35 IST" name="setup" finished-at="2024-03-23T23:29:39 IST" duration-ms="3556" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addMonitorToCart()[pri:0, instance:com.testng.AmazonTest.AmazonTest@4b5d6a01]" started-at="2024-03-23T23:29:39 IST" name="addMonitorToCart" finished-at="2024-03-23T23:30:03 IST" duration-ms="23865" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addMonitorToCart -->
+        <test-method is-config="true" signature="teardownclass()[pri:0, instance:com.testng.AmazonTest.AmazonTest@4b5d6a01]" started-at="2024-03-23T23:30:03 IST" name="teardownclass" finished-at="2024-03-23T23:30:03 IST" duration-ms="126" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardownclass -->
+      </class> <!-- com.testng.AmazonTest.AmazonTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
