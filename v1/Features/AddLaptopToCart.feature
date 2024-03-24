@@ -1,6 +1,6 @@
 Feature: AddLaptopToCart
 
-Scenario: Successful addition of the first monitor inside cart with price matching with product, cart sub total and product price inside cart
+Scenario: Successful addition of the first laptop inside cart with price matching with product, cart sub total and product price inside cart
 Given User launch chrome browser
 When User opens "https://www.amazon.com"
 Then Window with title "Amazon.com. Spend less. Smile more." should be opened

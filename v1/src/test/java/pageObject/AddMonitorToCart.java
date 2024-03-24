@@ -126,15 +126,21 @@ public class AddMonitorToCart {
 		JavascriptExecutor js = (JavascriptExecutor) ldriver;
 		Actions act = new Actions(ldriver);
 
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 		try {
-			act.moveToElement(NoThanksButton).click().build().perform();
+			js.executeScript("arguments[0].click();", NoThanksButton);
 		}
 		catch(Exception e) {
 			System.out.println("Pop up not found");
 		}
 		try {
-			js.executeScript("arguments[0].click();", NoThanksButton);
+			act.click(NoThanksButton).build().perform();
+		}
+		catch(Exception e) {
+			System.out.println("Pop up not found");
+		}
+		try {
+			NoThanksButton.click();
 		}
 		catch(Exception e) {
 			System.out.println("Pop up not found");
