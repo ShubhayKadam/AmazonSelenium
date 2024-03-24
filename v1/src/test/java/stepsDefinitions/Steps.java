@@ -46,13 +46,18 @@ public class Steps {
 		mtr.locationCheck(location);
 	}
 
-	@When("User search for Monitor and hits Enter")
-	public void user_search_for_monitor_and_hits_enter() {
-		mtr.searchForMonitor();
+	@When("User search for {string} and hits Enter")
+	public void user_search_for_and_hits_enter(String producttype) {
+		mtr.searchForMonitor(producttype);
 	}
 
-	@Then("List of monitors available should be displayed")
-	public void list_of_monitors_available_should_be_displayed() {
+	@Then("List of Monitor available should be displayed")
+	public void list_of_monitor_available_should_be_displayed() {
+		mtr.waitForListOfMonitor();  
+	}
+	
+	@Then("List of Laptop available should be displayed")
+	public void list_of_laptop_available_should_be_displayed() {
 		mtr.waitForListOfMonitor();  
 	}
 
@@ -145,10 +150,10 @@ public class Steps {
 			System.out.println("Test failed as product price is not matching with sub total");
 		}
 	}
-	
+
 	@Then("Close the browser")
 	public void close_the_browser() {
-	    driver.close();
+		driver.close();
 	}
 
 }

@@ -93,9 +93,9 @@ public class AddMonitorToCart {
 			System.out.println("Test failed");
 		}
 	}
-	public void searchForMonitor() {
+	public void searchForMonitor(String producttype) {
 		wait.until(ExpectedConditions.elementToBeClickable(SearchBox)).click();
-		SearchBox.sendKeys("Monitor");
+		SearchBox.sendKeys(producttype);
 		SearchBox.sendKeys(Keys.ENTER);
 	}
 	public void waitForListOfMonitor() {
@@ -126,7 +126,7 @@ public class AddMonitorToCart {
 		JavascriptExecutor js = (JavascriptExecutor) ldriver;
 		Actions act = new Actions(ldriver);
 
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 		try {
 			act.moveToElement(NoThanksButton).click().build().perform();
 		}
