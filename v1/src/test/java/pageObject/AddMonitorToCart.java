@@ -13,15 +13,14 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
 
 public class AddMonitorToCart {
 
 	WebDriver ldriver;
 	WebDriverWait wait;
-	public JavascriptExecutor js = (JavascriptExecutor) ldriver;
-	public Actions act = new Actions(ldriver);
-	public Boolean check;
+//	public JavascriptExecutor js = (JavascriptExecutor) ldriver;
+//	public Actions act = new Actions(ldriver);
+//	public Boolean check;
 	
 	
 	@FindBy (xpath="//input[contains(@id,'searchtextbox')]")
@@ -78,8 +77,6 @@ public class AddMonitorToCart {
 	public AddMonitorToCart(WebDriver rdriver) {
 		ldriver = rdriver;
 		PageFactory.initElements(rdriver, this);
-//		this.driver=driver;
-//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		wait = new WebDriverWait(rdriver, Duration.ofSeconds(60));
 	}
 	public void setLocation(String zipCode) throws InterruptedException {
@@ -127,6 +124,9 @@ public class AddMonitorToCart {
 	}
 	public void addToCartButton() throws InterruptedException {
 		AddToCartButton.click();
+		JavascriptExecutor js = (JavascriptExecutor) ldriver;
+		Actions act = new Actions(ldriver);
+
 		Thread.sleep(2000);
 		try {
 			act.moveToElement(NoThanksButton).click().build().perform();
@@ -165,7 +165,7 @@ public class AddMonitorToCart {
 		return prodSubTotal;
 	}
 	public Boolean compareTotal(String price1, String price2) {
-		
+		Boolean check;
 		if(price1.equals(price2)) {
 			System.out.println(price1+" and "+price2+" are matching");
 			check = true;
