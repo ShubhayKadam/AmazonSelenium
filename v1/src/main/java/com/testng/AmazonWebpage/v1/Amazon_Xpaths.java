@@ -51,4 +51,7 @@ public class Amazon_Xpaths {
 	
 	@FindBy (xpath="(//button[@aria-label='Close'])[2]")
 	public WebElement CloseButton;
+	
+	@FindBy (xpath="//div[@id='glow-ingress-block']//span[2]")
+	public WebElement LocationCheck;
 }

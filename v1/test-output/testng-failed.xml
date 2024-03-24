@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testng.AmazonTest.AmazonTest">
+      <class name="BrowserDebugger">
         <methods>
-          <include name="addLaptopToCart"/>
-          <include name="teardownclass"/>
-          <include name="setup"/>
+          <include name="newfunc"/>
+          <include name="beforeTest"/>
         </methods>
-      </class> <!-- com.testng.AmazonTest.AmazonTest -->
+      </class> <!-- BrowserDebugger -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

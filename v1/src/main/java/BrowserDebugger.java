@@ -20,16 +20,13 @@ public class BrowserDebugger extends Amazon_Xpaths{
 	public void newfunc(WebDriver driver, WebDriverWait wait) throws InterruptedException {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		Actions act = new Actions(driver);
-		AddToCartButton.click();
-		Thread.sleep(2000);
-		try {
-			//js.executeScript("arguments[0].click();", NoThanksButton);
-			act.moveToElement(NoThanksButton).click().build().perform();
-		}
-		catch(Exception e) {
-			System.out.println("Pop up not found");
-		}
-		Thread.sleep(2000);
+		Boolean addToCartButtonCheck = AddToCartButton.isDisplayed();
+		if(addToCartButtonCheck==true) {
+			   System.out.println("Add to cart button is displayed");
+		   }
+		   else {
+			   System.out.println("Test failed as Add to cart button has not displayed");
+		   }
 
 	}
 	@BeforeTest	

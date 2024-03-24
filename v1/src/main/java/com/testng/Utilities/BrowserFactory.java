@@ -9,7 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class BrowserFactory {
 	public static WebDriver startApp(WebDriver driver) {
-		System.setProperty("webdriver.chrome.driver","C:\\Users\\Shubhay\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver","C:\\Users\\Shubhay\\git\\AmazonSelenium1\\v1\\Drivers\\chromedriver.exes");
 		driver = new ChromeDriver();
 		driver.get("https://www.amazon.com");
 		driver.manage().window().maximize();
