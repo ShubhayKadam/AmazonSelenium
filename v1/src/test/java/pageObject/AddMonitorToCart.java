@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -18,7 +19,9 @@ public class AddMonitorToCart {
 
 	WebDriver ldriver;
 	WebDriverWait wait;
-	public String monitorName;
+	public String productName;
+	public String productNameOneOutofTwo;
+	public String productNameTwoOutofTwo;
 	public Boolean check;
 	
 	
@@ -98,17 +101,27 @@ public class AddMonitorToCart {
 		SearchBox.sendKeys(producttype);
 		SearchBox.sendKeys(Keys.ENTER);
 	}
-	public void waitForListOfMonitor() {
+	public void waitForListOfProduct() {
 		wait.until(ExpectedConditions.visibilityOfAllElements(ItemList));
 	}
 	public void selectFirstMonitor() {
 		WebElement firstMonitor = ItemList.get(0);
-		monitorName = ItemList.get(0).getText();
+		productName = ItemList.get(0).getText();
 		firstMonitor.click();
 	}
-	public String displayFirstMonitorName() {
-		System.out.println("First monitor name is : "+monitorName);
-		return monitorName;
+	public String displayFirstProductName() {
+		System.out.println("First Product name is : "+productName);
+		return productName;
+	}
+	public String displayOneOutofTWoProductName() {
+		productNameOneOutofTwo = productName;
+		System.out.println("Product name is : "+productNameOneOutofTwo);
+		return productNameOneOutofTwo;
+	}
+	public String displayTwoOutofTwoProductName() {
+		productNameTwoOutofTwo = productName;
+		System.out.println("Product name is : "+productNameTwoOutofTwo);
+		return productNameTwoOutofTwo;
 	}
 	public String getPriceOfProduct() {
 		wait.until(ExpectedConditions.visibilityOf(ProductPagePriceWholeNumber));
@@ -153,7 +166,7 @@ public class AddMonitorToCart {
 	}
 	public void openCart() throws InterruptedException {
 		CartIcon.click();
-		Thread.sleep(2000);
+		Thread.sleep(5000);
 	}
 	public Boolean checkIfShoppingCartIsOpened() {
 		Boolean checkShoppingCartText = ShoppingCartText.isDisplayed();
@@ -178,5 +191,13 @@ public class AddMonitorToCart {
 			check = false;
 		}
 		return check;
+	}
+	public String checkPriceInsideCartWithString(String productName) {
+		String productPriceInCart = ldriver.findElement(By.xpath("//span[contains(text(),'"+productName.trim()+"')]//..//..//..//..//..//..//span[contains(@class,'product-price')]")).getText().replace("$","");
+		return productPriceInCart;
+	}
+	public Double additionOfDoubles(Double db1, Double db2) {
+		Double totalOfProductsByAddition = db1 + db2;
+		return totalOfProductsByAddition;
 	}
 }

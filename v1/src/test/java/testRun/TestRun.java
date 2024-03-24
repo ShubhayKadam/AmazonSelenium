@@ -7,7 +7,8 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		features = {".//Features/AddMonitorToCart.feature",
-				".//Features/AddLaptopToCart.feature"},
+				".//Features/AddLaptopToCart.feature",
+				".//Features/AddHeadphonesAndKeyboardToCart.feature"},
 		glue= {"stepsDefinitions"},
 		dryRun=false,
 		plugin={"pretty",
@@ -15,9 +16,6 @@ import io.cucumber.testng.CucumberOptions;
 				"json:target/cucumber-reports/cucumber.json"
 		},
 		monochrome=true
-		
-		
-		
 		)
 
 
