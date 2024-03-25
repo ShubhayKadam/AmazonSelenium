@@ -9,7 +9,7 @@ When User Sets the location zip to "10001"
 Then Location should be updated to "New York"
 When User search for "Headphones" and hits Enter
 Then List of Headphones available should be displayed
-When User selects first result from the list of results
+When User selects "1" st/nd/rd result from the list of results
 Then First Headphones information page should be displayed
 When User should be able to get price of the first product
 Then Add to cart button should be displayed
@@ -17,7 +17,7 @@ When User clicks on Add to cart button
 Then Product should get added in the cart and Cart item count should get updated to 1
 When User search for "Keyboard" and hits Enter
 Then List of Keyboards available should be displayed
-When User selects first result from the list of results
+When User selects "1" st/nd/rd result from the list of results
 Then First Keyboard information page should be displayed
 When User should be able to get price of the second product
 Then Add to cart button should be displayed

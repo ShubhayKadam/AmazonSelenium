@@ -73,9 +73,16 @@ public class Steps {
 		System.out.println("Laptop list has displayed");
 	}
 
-	@When("User selects first result from the list of results")
-	public void user_selects_first_result_from_the_list_of_results() {
-		mtr.selectFirstMonitor();
+	/*
+	 * @When("User selects first result from the list of results") public void
+	 * user_selects_first_result_from_the_list_of_results() {
+	 * mtr.selectFirstMonitor(); }
+	 */
+	
+	@When("User selects {string} st\\/nd\\/rd result from the list of results")
+	public void user_selects_st_nd_rd_result_from_the_list_of_results(String cnt) {
+		int intCnt = Integer.parseInt(cnt);
+		mtr.selectNthProduct(intCnt);
 	}
 
 	@Then("First monitors information page should be displayed")

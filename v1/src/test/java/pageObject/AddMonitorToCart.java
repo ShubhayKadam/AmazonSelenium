@@ -109,6 +109,11 @@ public class AddMonitorToCart {
 		productName = ItemList.get(0).getText();
 		firstMonitor.click();
 	}
+	public void selectNthProduct(int cnt) {
+		WebElement firstMonitor = ItemList.get(cnt-1);
+		productName = ItemList.get(cnt-1).getText();
+		firstMonitor.click();
+	}
 	public String displayFirstProductName() {
 		//System.out.println("First Product name is : "+productName);
 		return productName;
