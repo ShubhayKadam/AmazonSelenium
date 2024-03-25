@@ -1,3 +1,4 @@
+@OneProduct
 Feature: AddLaptopToCart
 
 Scenario: Successful addition of the first laptop inside cart with price matching with product, cart sub total and product price inside cart

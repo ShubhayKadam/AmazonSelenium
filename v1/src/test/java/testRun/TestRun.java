@@ -10,6 +10,7 @@ import io.cucumber.testng.CucumberOptions;
 				".//Features/AddLaptopToCart.feature",
 				".//Features/AddHeadphonesAndKeyboardToCart.feature"},
 		glue= {"stepsDefinitions"},
+		tags= ("@OneProduct"),
 		dryRun=false,
 		plugin={"pretty",
 				"html:target/cucumber-reports/cucumber.html",

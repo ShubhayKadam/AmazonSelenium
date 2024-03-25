@@ -1,3 +1,4 @@
+@OneProduct
 Feature: AddMonitorToCart
 
 Scenario: Successful addition of the first monitor inside cart with price matching with product, cart sub total and product price inside cart
