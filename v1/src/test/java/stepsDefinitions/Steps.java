@@ -64,11 +64,13 @@ public class Steps {
 	@Then("List of Monitor available should be displayed")
 	public void list_of_monitor_available_should_be_displayed() {
 		mtr.waitForListOfProduct();  
+		System.out.println("Monitor list has displayed");
 	}
 	
 	@Then("List of Laptop available should be displayed")
 	public void list_of_laptop_available_should_be_displayed() {
-		mtr.waitForListOfProduct();  
+		mtr.waitForListOfProduct(); 
+		System.out.println("Laptop list has displayed");
 	}
 
 	@When("User selects first result from the list of results")
@@ -108,6 +110,7 @@ public class Steps {
 		}
 		else {
 			System.out.println("Test failed as Add to cart button has not displayed");
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -123,6 +126,7 @@ public class Steps {
 		}
 		else {
 			System.out.println("Test failed as item in the cart is not equal to given number");
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -138,6 +142,7 @@ public class Steps {
 		}
 		else {
 			System.out.println("Test failed as shopping cart has not been displayed");
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -154,7 +159,7 @@ public class Steps {
 		else {
 			System.out.println("Test failed as product price is not matching with cart");
 			System.out.println(priceOnProdPage+" and "+priceOfProductInsidecart+" are NOT matching");
-
+			Assert.assertTrue(false);	
 		}
 	}
 	@Then("Cart Price should match with price of Headphones from the product from product page")
@@ -165,6 +170,7 @@ public class Steps {
 		else {
 			System.out.println("Test failed as product price is not matching with cart");
 			System.out.println(priceOnProdPageOfProdOneofTwo+" and "+priceOfFirstProductInsidecart+" are NOT matching");
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -176,11 +182,9 @@ public class Steps {
 		else {
 			System.out.println("Test failed as product price is not matching with cart");
 			System.out.println(priceOnProdPageOfProdTwofTwo+" and "+priceOfSecondProductInsidecart+" are NOT matching");
+			Assert.assertTrue(false);
 		}
 	}
-	
-	
-
 
 	@When("User checks sub total of the cart")
 	public void user_checks_sub_total_of_the_cart() {
@@ -194,6 +198,7 @@ public class Steps {
 		}
 		else {
 			System.out.println("Test failed as product price is not matching with sub total");
+			Assert.assertTrue(false);
 		}
 	}
 	@Then("List of Headphones available should be displayed")
@@ -209,6 +214,7 @@ public class Steps {
 		}
 		else {
 			System.out.println("Test Case failed as Product name is not displayed");
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -225,6 +231,7 @@ public class Steps {
 		}
 		else {
 			System.out.println("Test Case failed as Product name is not displayed");
+			Assert.assertTrue(false);
 		}
 	}
 	
@@ -257,6 +264,7 @@ public class Steps {
 	    }
 	    else {
 	    	System.out.println("Test failed as product total and subtotal is not matching");
+	    	Assert.assertTrue(false);
 	    }
 	}
 
