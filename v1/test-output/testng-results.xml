@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-25T04:38:31 IST" name="Suite" finished-at="2024-03-25T04:41:04 IST" duration-ms="152885">
+  <suite started-at="2024-03-25T14:57:21 IST" name="Suite" finished-at="2024-03-25T14:59:35 IST" duration-ms="134206">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRun.TestRun@4c583ecf]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2024-03-25T04:38:31 IST" name="Test" finished-at="2024-03-25T04:41:04 IST" duration-ms="152885">
+    <test started-at="2024-03-25T14:57:21 IST" name="Test" finished-at="2024-03-25T14:59:35 IST" duration-ms="134206">
       <class name="testRun.TestRun">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRun.TestRun@4c583ecf]" started-at="2024-03-25T04:38:31 IST" name="setUpClass" finished-at="2024-03-25T04:38:32 IST" duration-ms="528" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:testRun.TestRun@4c583ecf]" started-at="2024-03-25T14:57:21 IST" name="setUpClass" finished-at="2024-03-25T14:57:21 IST" duration-ms="611" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@172f4514]]>
+                <![CDATA[org.testng.TestRunner@6e243175]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRun.TestRun@4c583ecf]" started-at="2024-03-25T04:38:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-25T04:39:37 IST" duration-ms="65422" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRun.TestRun@4c583ecf]" started-at="2024-03-25T14:57:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-25T14:58:18 IST" duration-ms="56269" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,7 +37,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRun.TestRun@4c583ecf]" started-at="2024-03-25T04:39:37 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-25T04:40:16 IST" duration-ms="38443" status="FAIL">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRun.TestRun@4c583ecf]" started-at="2024-03-25T14:58:18 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-25T14:58:57 IST" duration-ms="39570" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -50,25 +50,10 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.NumberFormatException">
-            <message>
-              <![CDATA[For input string: ""]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.NumberFormatException: For input string: ""
-at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
-at java.base/java.lang.Integer.parseInt(Integer.java:678)
-at java.base/java.lang.Integer.parseInt(Integer.java:786)
-at pageObject.AddMonitorToCart.checkIfProductIsAddedToTheCart(AddMonitorToCart.java:164)
-at stepsDefinitions.Steps.product_should_get_added_in_the_cart_and_cart_item_count_should_get_updated_to(Steps.java:119)
-at ✽.Product should get added in the cart and Cart item count should get updated to 1(file:///C:/Users/Shubhay/git/AmazonSelenium1/v1/./Features/AddLaptopToCart.feature:16)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.NumberFormatException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRun.TestRun@4c583ecf]" started-at="2024-03-25T04:40:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-25T04:41:04 IST" duration-ms="48385" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:testRun.TestRun@4c583ecf]" started-at="2024-03-25T14:58:57 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2024-03-25T14:59:35 IST" duration-ms="37617" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -84,7 +69,7 @@ at ✽.Product should get added in the cart and Cart item count should get updat
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRun.TestRun@4c583ecf]" started-at="2024-03-25T04:41:04 IST" name="tearDownClass" finished-at="2024-03-25T04:41:04 IST" duration-ms="79" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:testRun.TestRun@4c583ecf]" started-at="2024-03-25T14:59:35 IST" name="tearDownClass" finished-at="2024-03-25T14:59:35 IST" duration-ms="85" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

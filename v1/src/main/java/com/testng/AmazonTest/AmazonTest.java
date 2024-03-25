@@ -7,13 +7,13 @@ import com.testng.AmazonWebpage.v1.AmazonPage;
 import com.testng.Utilities.BaseClassPage;
 
 public class AmazonTest extends BaseClassPage{
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void addMonitorToCart() throws InterruptedException{
 		AmazonPage monitor = PageFactory.initElements(driver, AmazonPage.class);
 		System.out.println("Inside addMonitorToCart");
 		monitor.addMonitor();
 	}
-	@Test(enabled = true)
+	@Test(enabled = false)
 	public void addLaptopToCart() throws InterruptedException {
 		AmazonPage laptop = PageFactory.initElements(driver, AmazonPage.class);
 		System.out.println("Inside addLaptopToCart");

@@ -110,23 +110,23 @@ public class AddMonitorToCart {
 		firstMonitor.click();
 	}
 	public String displayFirstProductName() {
-		System.out.println("First Product name is : "+productName);
+		//System.out.println("First Product name is : "+productName);
 		return productName;
 	}
 	public String displayOneOutofTWoProductName() {
 		productNameOneOutofTwo = productName;
-		System.out.println("Product name is : "+productNameOneOutofTwo);
+		//System.out.println("Product name is : "+productNameOneOutofTwo);
 		return productNameOneOutofTwo;
 	}
 	public String displayTwoOutofTwoProductName() {
 		productNameTwoOutofTwo = productName;
-		System.out.println("Product name is : "+productNameTwoOutofTwo);
+		//System.out.println("Product name is : "+productNameTwoOutofTwo);
 		return productNameTwoOutofTwo;
 	}
 	public String getPriceOfProduct() {
 		wait.until(ExpectedConditions.visibilityOf(ProductPagePriceWholeNumber));
 		String prodPrice = ProductPagePriceWholeNumber.getText().concat(".").concat(ProductPagePriceFractionNumber.getText());
-		System.out.println("Price of the product on product page is :"+prodPrice);
+		//System.out.println("Price of the product on product page is :"+prodPrice);
 		return prodPrice;
 	}
 	public Boolean waitForAddToCartButton() throws InterruptedException {
@@ -144,19 +144,19 @@ public class AddMonitorToCart {
 			js.executeScript("arguments[0].click();", NoThanksButton);
 		}
 		catch(Exception e) {
-			System.out.println("Pop up not found");
+			//System.out.println("Pop up not found");
 		}
 		try {
 			act.click(NoThanksButton).build().perform();
 		}
 		catch(Exception e) {
-			System.out.println("Pop up not found");
+			//System.out.println("Pop up not found");
 		}
 		try {
 			NoThanksButton.click();
 		}
 		catch(Exception e) {
-			System.out.println("Pop up not found");
+			//System.out.println("Pop up not found");
 		}
 		Thread.sleep(2000);
 	}

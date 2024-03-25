@@ -35,13 +35,14 @@ public class Steps {
 	@When("User opens {string}")
 	public void user_opens(String url) throws InterruptedException {
 		driver.get(url);
-		Thread.sleep(10000);
+		//Thread.sleep(10000);
 	}
 
 	@Then("Window with title {string} should be opened")
 	public void window_with_title_should_be_opened(String string) {
 		String title = driver.getTitle();
 		Assert.assertEquals(title, "Amazon.com. Spend less. Smile more.");
+		System.out.println(title+"Page is opened");
 	}
 
 	@When("User Sets the location zip to {string}")
@@ -52,6 +53,7 @@ public class Steps {
 	@Then("Location should be updated to {string}")
 	public void location_should_be_updated_to(String location) {
 		mtr.locationCheck(location);
+		System.out.println("Location has been updated to "+location);
 	}
 
 	@When("User search for {string} and hits Enter")
@@ -243,20 +245,19 @@ public class Steps {
 	@Then("Sub Total Price should match with total price of the two products added")
 	public void sub_total_price_should_match_with_total_price_of_the_two_products_added() {
 	    Double subTotalOfTwoProducts = Double.parseDouble(mtr.getSubTotal());
-	    System.out.println(subTotalOfTwoProducts);
+	    //System.out.println(subTotalOfTwoProducts);
 	    Double firstProdPriceToDbl = Double.parseDouble(priceOfFirstProductInsidecart);
-	    System.out.println(firstProdPriceToDbl);
+	    //System.out.println(firstProdPriceToDbl);
 	    Double secondProdPriceToDbl = Double.parseDouble(priceOfSecondProductInsidecart);
-	    System.out.println(secondProdPriceToDbl);
+	    //System.out.println(secondProdPriceToDbl);
 	    Double additionOfTwo = mtr.additionOfDoubles(firstProdPriceToDbl, secondProdPriceToDbl);
-	    System.out.println(additionOfTwo);
-	    if(subTotalOfTwoProducts==additionOfTwo) {
+	    //System.out.println(additionOfTwo);
+	    if(Double.compare(subTotalOfTwoProducts, additionOfTwo)==0) {
 	    	System.out.println("Products total is matching with addition");
 	    }
 	    else {
 	    	System.out.println("Test failed as product total and subtotal is not matching");
 	    }
-	    
 	}
 
 	@Then("Close the browser")
